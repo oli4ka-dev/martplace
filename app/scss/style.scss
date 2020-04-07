@@ -2,7 +2,7 @@
 @import 'global';
 @import 'fonts';
 
-
+//start header
 .header__top {
     background-color: #eef1f3;
 }
@@ -17,10 +17,12 @@
 .header__box {
     margin-left: auto;
     margin-right: 15px;
-    .header__btn{
+
+    .header__btn {
         margin-right: 15px;
     }
-    a + a{
+
+    a+a {
         margin-right: 33px;
     }
 }
@@ -34,25 +36,30 @@
     line-height: 28px;
     color: #fff;
 }
-.header__avatar{
+
+.header__avatar {
     display: flex;
     align-items: center;
     line-height: 22px;
 }
-.header__avatar-user img{
+
+.header__avatar-user img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 22px;
 }
-.header__avatar-name{
-   
+
+.header__avatar-name {
+
     font-weight: 700;
     color: #333;
 }
-.header__avatar-price{
+
+.header__avatar-price {
     color: $bg-btn;
 }
+
 .header__menu-inner {
     display: flex;
     justify-content: space-between;
@@ -72,23 +79,24 @@
             height: 45px;
             border-radius: 22px;
             border: 1px solid #d9dfe5;
-            outline: none;
             padding: 0 80px 0 24px;
-            &:focus{
+
+            &:focus {
                 border: 1px solid $bg-btn;
             }
-            &::placeholder{
+
+            &::placeholder {
                 color: #898f96;
             }
         }
-        .search {
+
+        .header__menu-search {
             background-color: $bg-btn;
-            outline: none;
-            border: none;
             height: 46px;
             width: 70px;
             border-radius: 22px;
             position: absolute;
+            border: none;
             top: 0;
             right: 0;
         }
@@ -118,3 +126,136 @@
     }
 
 }
+
+//end header
+//start section search
+.search {
+    min-height: 725px;
+    background-color: $bg;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.search__inner {
+    font-size: 60px;
+    line-height: 70px;
+
+    button+button {
+        margin-left: 30px;
+    }
+}
+
+.search__inner-suptitle {
+    padding: 180px 0 0px 0;
+}
+
+.search__inner-subtitle {
+    font-size: 20px;
+    line-height: 72px;
+    padding: 15px 0 55px 0;
+}
+
+.search-btn {
+    max-width: 190px;
+    height: 55px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 25px;
+    background-color: transparent;
+    font-size: 20px;
+    transition: all .5s;
+}
+
+.search-btn:hover {
+    background-color: #fff;
+    color: $bg-btn;
+}
+
+.search__box::after {
+    content: "";
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    opacity: .5;
+    position: absolute;
+    left: 40px;
+    top: -40px;
+    max-width: 1080px;
+    width: 100%;
+    height: 135px;
+}
+
+.search__box::before {
+    content: "";
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    max-width: 1110px;
+    width: 100%;
+    height: 135px;  
+}
+//Не работает z-index:, непонимаю почему
+
+
+.search__box {
+    position: absolute;
+    bottom: -65px;
+    max-width: 1140px;
+    width: 100%;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    z-index: 4;
+
+    form {
+        min-height: 135px;
+        background-color: #fff;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input {
+            max-width: 808px;
+            width: 100%;
+            height: 55px;
+            border-radius: 5px;
+            border: 1px solid #dcdcdc;
+            color: #676767;
+            padding: 0 205px 0 30px;
+            line-height: 42px;
+            position: relative;
+        }
+
+        select {
+            position: absolute;
+            max-width: 193px;
+            min-height: 53px;
+            border: none;
+            border-left: 1px solid #dcdcdc;
+            color: #676767;
+            line-height: 42px;
+            right: 36%;
+
+        }
+
+    }
+}
+
+.search__now-btn {
+    background-color: $bg-btn;
+    color: #fff;
+    line-height: 42px;
+    border-radius: 4px;
+    max-width: 223px;
+    width: 100%;
+    margin-left: 30px;
+}
+
+//start section marketing
+
+.marketing{
+    min-height: 710px;
+}
+//end section marketing
