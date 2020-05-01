@@ -7,27 +7,62 @@ html {
 *::after {
     box-sizing: inherit;
 }
-a{
-    display: inline-block;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+// прижать .footer к низу 
+html,
+body {
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 1;
+}
+
+.footer {
+    flex: 0 0 1;
+}
+
+a {
     text-decoration: none;
 }
+
 ul,
-li{
+li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-body{
-    font-family: 'Quicksand-Regular', sans-serif;
+
+body {
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
 }
-.container{
+
+.container {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }
-.btn{
-    outline: none;
+.title{
+    font-size: 30px;
+    color: #000;
 }
+.rate-star{
+    display: inline-block; 
+}
+
+
